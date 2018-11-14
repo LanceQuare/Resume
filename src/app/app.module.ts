@@ -14,6 +14,7 @@ import { ActionsComponent } from './actions/actions.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatGridListModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material/button';
+import { MglTimelineModule } from 'angular-mgl-timeline';
 
 @NgModule({
   declarations: [
@@ -31,9 +32,9 @@ import { MatButtonModule } from '@angular/material/button';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatGridListModule,
-    MatButtonModule
+    MatButtonModule,
+    MglTimelineModule
   ],
-  exports: [ MatGridListModule, MatButtonModule ],
   providers: [],
   bootstrap: [AppComponent]
 })
