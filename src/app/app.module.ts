@@ -10,11 +10,20 @@ import { IntroComponent } from './intro/intro.component';
 import { PersonalityComponent } from './personality/personality.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ActionsComponent } from './actions/actions.component';
+import { TimelineDetailComponent } from './timeline-detail/timeline-detail.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatGridListModule } from '@angular/material';
-import { MatButtonModule } from '@angular/material/button';
+import {
+  MatGridListModule,
+  MatButtonModule,
+  MatSidenavModule,
+  MatIconModule,
+  MatToolbarModule,
+  MatListModule
+} from '@angular/material';
 import { MglTimelineModule } from 'angular-mgl-timeline';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,7 +34,9 @@ import { MglTimelineModule } from 'angular-mgl-timeline';
     IntroComponent,
     PersonalityComponent,
     PortfolioComponent,
-    ActionsComponent
+    ActionsComponent,
+    TimelineDetailComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +44,12 @@ import { MglTimelineModule } from 'angular-mgl-timeline';
     BrowserAnimationsModule,
     MatGridListModule,
     MatButtonModule,
-    MglTimelineModule
+    MglTimelineModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatListModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

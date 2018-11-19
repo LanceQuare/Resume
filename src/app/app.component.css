@@ -1,0 +1,27 @@
+.nav-bar {
+  background-color: rgba(172, 172, 172, 0.1);
+  position: fixed;
+  padding-left: 50%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.nav-bar-mobile {
+  background-color: rgba(172, 172, 172, 0.9);
+}
+
+.nav-bar-item {
+  color: black;
+}
+
+.side-nav-menu {
+  margin-left:50%;
+  background-color: black; 
+  height: 900px; 
+  width: 0%;
+  position: fixed;
+  top: 64px;
+  z-index: 1;
+}
