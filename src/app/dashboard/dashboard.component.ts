@@ -20,9 +20,6 @@ export class DashboardComponent implements OnInit {
       } else {
         this.coverRow = 2;
         this.introRow = 2;
-        if (window.screen.height > 900) {
-          this.rowHeight = '900px';
-        }
       }
     });
    }

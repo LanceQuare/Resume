@@ -2,7 +2,7 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <mat-toolbar color="primary" [className]="isMobile ? 'nav-bar-mobile' : 'nav-bar'" >
   <button class="nav-bar-item" mat-icon-button (click)="navToggle()"><mat-icon>menu</mat-icon></button>
-  <p class="nav-bar-item">Menu</p>
+  <span class="nav-bar-item">Menu</span>
 </mat-toolbar>
 <app-sidenav [@animanav]="animanav" class="side-nav-menu">
 </app-sidenav>

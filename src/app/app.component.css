@@ -5,11 +5,15 @@
   top: 0;
   left: 0;
   z-index: 1;
+  height: 64px;
   width: 100%;
 }
 
 .nav-bar-mobile {
   background-color: rgba(172, 172, 172, 0.9);
+  width: 100vw;
+  height: 64px;
+  display: block;
 }
 
 .nav-bar-item {
@@ -17,11 +21,11 @@
 }
 
 .side-nav-menu {
-  margin-left:50%;
   background-color: black; 
   height: 900px; 
   width: 0%;
   position: fixed;
   top: 64px;
+  left: 50%;
   z-index: 1;
 }
