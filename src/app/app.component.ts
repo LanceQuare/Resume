@@ -12,6 +12,10 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
         'width': '50%',
         'opacity': '1'
       })),
+      state('show-mobile', style({
+        'width': '100%',
+        'opacity': '1'
+      })),
       state('dismiss', style({
         'width': '0%',
         'opacity': '0'
@@ -22,7 +26,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 })
 export class AppComponent {
   title = 'lazzaro-resume';
-  animanav: string;
+  animanav = 'dismiss';
   toggle: Boolean = false;
   public isMobile: Boolean = false;
 
@@ -32,20 +36,18 @@ export class AppComponent {
     ]).subscribe(result => {
       if (result.matches) {
         this.isMobile = true;
-        console.log('match!!');
       } else {
         this.isMobile = false;
-        console.log('not match!!');
-        // if (window.screen.height > 900) {
-        //   this.rowHeight = '900px';
-        // }
       }
     });
   }
 
   navToggle() {
     this.toggle = !this.toggle;
-    this.animanav = this.toggle ? 'show' : 'dismiss';
-    console.log(this.animanav);
+    if (this.isMobile) {
+      this.animanav = this.toggle ? 'show-mobile' : 'dismiss';
+    } else {
+      this.animanav = this.toggle ? 'show' : 'dismiss';
+    }
   }
 }

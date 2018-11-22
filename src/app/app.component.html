@@ -4,7 +4,7 @@
   <button class="nav-bar-item" mat-icon-button (click)="navToggle()"><mat-icon>menu</mat-icon></button>
   <span class="nav-bar-item">Menu</span>
 </mat-toolbar>
-<app-sidenav [@animanav]="animanav" class="side-nav-menu">
+<app-sidenav [@animanav]="animanav" [className]="isMobile ? 'side-nav-menu-mobile' : 'side-nav-menu'">
 </app-sidenav>
 
 <router-outlet></router-outlet>

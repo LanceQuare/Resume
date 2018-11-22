@@ -29,3 +29,45 @@
   left: 50%;
   z-index: 1;
 }
+
+.side-nav-menu-mobile {
+  background-color: black; 
+  height: 900px; 
+  width: 0%;
+  position: fixed;
+  top: 64px;
+  left: 0;
+  z-index: 1;
+}
+
+.menu-show-anima {
+  animation-name: desktop-anima;
+  animation-duration: 0.25s;
+}
+
+.menu-show-anima-mobile {
+  animation-name: desktop-anima-mobile;
+  animation-duration: 0.25s;
+}
+
+@keyframes desktop-anima {
+  0% {
+    width: 0; 
+    opacity: 0;
+  }
+  100% {
+    width: 50%; 
+    opacity: 1;
+  }
+}
+
+@keyframes desktop-anima-mobile {
+  0% {
+    width: 0; 
+    opacity: 0;
+  }
+  100% {
+    width: 100%; 
+    opacity: 1;
+  }
+}
