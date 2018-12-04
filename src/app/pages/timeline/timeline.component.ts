@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
-import { LocalDataService } from 'src/app/local-data.service';
-import { TimelineEvent } from '../timeline-event';
+import { LocalDataService } from '@services/local-data.service';
+import { TimelineEvent } from '@models/timeline-event';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-timeline',
@@ -11,10 +12,22 @@ import { TimelineEvent } from '../timeline-event';
 export class TimelineComponent implements OnInit {
   entries: Array<TimelineEvent>;
   public alternate: Boolean = false;
-  constructor(private location: Location, private locaDataService: LocalDataService) {
+  public isMobile: Boolean = false;
+
+  constructor(private location: Location, private locaDataService: LocalDataService, breakpointObserver: BreakpointObserver) {
     locaDataService.getWorkingExp()
     .subscribe(resp => {
       this.entries = resp.body;
+    });
+
+    breakpointObserver.observe([
+      Breakpoints.HandsetPortrait
+    ]).subscribe(result => {
+      if (result.matches) {
+        this.isMobile = true;
+      } else {
+        this.isMobile = false;
+      }
     });
    }
 

@@ -18,17 +18,10 @@ export class DashboardComponent implements OnInit {
         this.coverRow = 4;
         this.introRow = 4;
         this.rowHeight = '1:4';
-        console.log('a');
       } else {
         this.coverRow = 2;
         this.introRow = 2;
         this.rowHeight = document.documentElement.clientHeight + 'px';
-        // if (document.documentElement.clientHeight > 900) {
-        //   console.log('b');
-        // } else {
-        //   this.rowHeight = '1:4';
-        //   console.log('c');
-        // }
       }
     });
    }
