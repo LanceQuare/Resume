@@ -2,6 +2,16 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "paths": {
+      "@services/*": [ "app/services/*" ],
+      "@pages/*": [ "app/pages/*" ],
+      "@models/*": [ "app/models/*" ]
+     },
+     "plugins": [
+      {
+          "name": "tslint-language-service",
+      }
+    ],
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
