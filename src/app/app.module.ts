@@ -3,14 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TimelineComponent } from './timeline/timeline.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { CoverComponent } from './cover/cover.component';
-import { IntroComponent } from './intro/intro.component';
-import { PersonalityComponent } from './personality/personality.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
-import { ActionsComponent } from './actions/actions.component';
-import { TimelineDetailComponent } from './timeline-detail/timeline-detail.component';
+import { TimelineComponent } from '@pages/timeline/timeline.component';
+import { DashboardComponent } from '@pages/dashboard/dashboard.component';
+import { CoverComponent } from '@pages/cover/cover.component';
+import { IntroComponent } from '@pages/intro/intro.component';
+import { PersonalityComponent } from '@pages/personality/personality.component';
+import { PortfolioComponent } from '@pages/portfolio/portfolio.component';
+import { ActionsComponent } from '@pages/actions/actions.component';
+import { SidenavComponent } from '@pages/sidenav/sidenav.component';
+import { TimelineDetailComponent } from '@pages/timeline-detail/timeline-detail.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
@@ -22,8 +23,9 @@ import {
   MatListModule
 } from '@angular/material';
 import { MglTimelineModule } from 'angular-mgl-timeline';
-import { SidenavComponent } from './sidenav/sidenav.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ScrollDispatchModule } from '@angular/cdk/scrolling';
+import { SidemenuColorDirective } from './directives/sidemenu-color.directive';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { HttpClientModule } from '@angular/common/http';
     PortfolioComponent,
     ActionsComponent,
     TimelineDetailComponent,
-    SidenavComponent
+    SidenavComponent,
+    SidemenuColorDirective
   ],
   imports: [
     BrowserModule,
@@ -49,7 +52,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatIconModule,
     MatToolbarModule,
     MatListModule,
-    HttpClientModule
+    HttpClientModule,
+    ScrollDispatchModule
   ],
   providers: [],
   bootstrap: [AppComponent]
