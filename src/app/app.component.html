@@ -1,10 +1,10 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<mat-toolbar color="primary" [className]="isMobile ? 'nav-bar-mobile' : 'nav-bar'" >
-  <button class="nav-bar-item" mat-icon-button (click)="navToggle()"><mat-icon>menu</mat-icon></button>
-  <span class="nav-bar-item">Menu</span>
+<mat-toolbar color="primary" [ngClass]="{'nav-bar-mobile': isMobile,'nav-bar': !isMobile}" appSidemenuColor [sidemenuContent]="false" [sidemenuMobile]="isMobile" [sidemenuScreenTop]="isScreenTop">
+  <button mat-icon-button (click)="navToggle()"><mat-icon  appSidemenuColor [sidemenuContent]="true" [sidemenuMobile]="isMobile" [sidemenuScreenTop]="isScreenTop"> menu</mat-icon></button>
+  <span  appSidemenuColor [sidemenuContent]="true" [sidemenuMobile]="isMobile" [sidemenuScreenTop]="isScreenTop">Menu</span>
 </mat-toolbar>
-<app-sidenav [@animanav]="animanav" [className]="isMobile ? 'side-nav-menu-mobile' : 'side-nav-menu'">
+<app-sidenav [@animanav]="animanav" [className]="isMobile ? 'side-nav-menu-mobile' : 'side-nav-menu'" (childClick)="navToggle()">
 </app-sidenav>
 
-<router-outlet></router-outlet>
+<router-outlet CdkScrollable ></router-outlet>

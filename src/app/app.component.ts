@@ -1,6 +1,7 @@
-import { Component, NgModule } from '@angular/core';
+import { Component, NgModule, OnInit, NgZone } from '@angular/core';
 import {trigger, state, style, animate, transition} from '@angular/animations';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { ScrollDispatcher, CdkScrollable } from '@angular/cdk/scrolling';
 
 @Component({
   selector: 'app-root',
@@ -24,14 +25,17 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
     ])
   ]
 })
-export class AppComponent {
+export class AppComponent implements OnInit  {
   title = 'lazzaro-resume';
   animanav = 'dismiss';
   toggle: Boolean = false;
-  public isMobile: Boolean = false;
+  isMobile: Boolean = false;
+  isScreenTop: Boolean = true;
 
-  constructor(breakpointObserver: BreakpointObserver) {
-    breakpointObserver.observe([
+  constructor(private breakpointObserver: BreakpointObserver, private scrollDispatcher: ScrollDispatcher, private zone: NgZone) {}
+
+  ngOnInit(): void {
+    this.breakpointObserver.observe([
       Breakpoints.HandsetPortrait
     ]).subscribe(result => {
       if (result.matches) {
@@ -39,6 +43,17 @@ export class AppComponent {
       } else {
         this.isMobile = false;
       }
+    });
+
+    this.scrollDispatcher.scrolled()
+    .subscribe((scrollable: CdkScrollable) => {
+      this.zone.run(() => {
+        if (window.document.scrollingElement.scrollTop === 0) {
+          this.isScreenTop = true;
+        } else {
+          this.isScreenTop = false;
+        }
+      });
     });
   }
 

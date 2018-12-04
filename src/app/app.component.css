@@ -1,5 +1,4 @@
 .nav-bar {
-  background-color: rgba(172, 172, 172, 0.1);
   position: fixed;
   padding-left: 50%;
   top: 0;
@@ -10,14 +9,24 @@
 }
 
 .nav-bar-mobile {
-  background-color: rgba(172, 172, 172, 0.9);
   width: 100vw;
   height: 64px;
-  display: block;
+}
+
+.normal-bg {
+  background-color: rgba(172, 172, 172, 0.1);
+}
+
+.black-bg {
+  background-color: black;
 }
 
 .nav-bar-item {
   color: black;
+}
+
+.nav-bar-item-mobile {
+  color: white;
 }
 
 .side-nav-menu {
