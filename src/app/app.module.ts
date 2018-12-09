@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-//Angular Material
+// Angular Material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatGridListModule,
@@ -12,13 +12,15 @@ import {
   MatSidenavModule,
   MatIconModule,
   MatToolbarModule,
-  MatListModule
+  MatListModule,
+  MatChipsModule,
+  MatDividerModule
 } from '@angular/material';
 import { MglTimelineModule } from 'angular-mgl-timeline';
 import { HttpClientModule } from '@angular/common/http';
 import { ScrollDispatchModule } from '@angular/cdk/scrolling';
 
-//Current Project
+// Current Project
 import { SidemenuColorDirective } from '@directives/sidemenu-color.directive';
 import { TimelineContecntDirective } from '@directives/timeline-contecnt.directive';
 import { TimelineComponent } from '@pages/timeline/timeline.component';
@@ -61,6 +63,8 @@ import { PersonalEventComponent } from '@pages/timeline/personal-event/personal-
     MatIconModule,
     MatToolbarModule,
     MatListModule,
+    MatChipsModule,
+    MatDividerModule,
     HttpClientModule,
     ScrollDispatchModule
   ],
