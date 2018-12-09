@@ -7,7 +7,8 @@
     "paths": {
        "@services/*": [ "app/services/*" ] ,
        "@pages/*": [ "app/pages/*" ],
-       "@models/*": [ "app/models/*" ]
+       "@models/*": [ "app/models/*" ],
+       "@directives/*": [ "app/directives/*" ]
       }
   },
   "exclude": [

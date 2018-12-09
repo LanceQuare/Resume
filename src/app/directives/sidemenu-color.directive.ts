@@ -11,7 +11,6 @@ export class SidemenuColorDirective implements OnChanges {
   constructor(private el: ElementRef, private renderer2: Renderer2) { }
 
   ngOnChanges(): void {
-    console.log('sct: ' + this.sidemenuScreenTop);
     if (this.sidemenuContent) {
       if (!this.sidemenuMobile && this.sidemenuScreenTop) {
         this.renderer2.removeClass(this.el.nativeElement, 'nav-bar-item-mobile');
