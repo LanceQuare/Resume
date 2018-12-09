@@ -6,7 +6,7 @@
       </mgl-timeline-entry-header>
       <mgl-timeline-entry-content>
         <div>
-          <div>{{entry.detail.name}}</div>
+          <app-timeline-event [data]="entry"></app-timeline-event>
         </div>
       </mgl-timeline-entry-content>
       <mgl-timeline-entry-dot class="primary" 

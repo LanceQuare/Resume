@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TimelineDetailComponent } from './timeline-detail.component';
+import { ProjectEventComponent } from './project-event.component';
 
-describe('TimelineDetailComponent', () => {
-  let component: TimelineDetailComponent;
-  let fixture: ComponentFixture<TimelineDetailComponent>;
+describe('ProjectEventComponent', () => {
+  let component: ProjectEventComponent;
+  let fixture: ComponentFixture<ProjectEventComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TimelineDetailComponent ]
+      declarations: [ ProjectEventComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TimelineDetailComponent);
+    fixture = TestBed.createComponent(ProjectEventComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

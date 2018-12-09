@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Location } from '@angular/common';
 import { LocalDataService } from '@services/local-data.service';
 import { TimelineEvent } from '@models/timeline-event';
