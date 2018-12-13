@@ -14,7 +14,8 @@ import {
   MatToolbarModule,
   MatListModule,
   MatChipsModule,
-  MatDividerModule
+  MatDividerModule,
+  MatCardModule
 } from '@angular/material';
 import { MglTimelineModule } from 'angular-mgl-timeline';
 import { HttpClientModule } from '@angular/common/http';
@@ -34,6 +35,9 @@ import { SidenavComponent } from '@pages/sidenav/sidenav.component';
 import { ProjectEventComponent } from '@pages/timeline/project-event/project-event.component';
 import { TimelineEventComponent } from '@pages/timeline/timeline-event/timeline-event.component';
 import { PersonalEventComponent } from '@pages/timeline/personal-event/personal-event.component';
+import { ContactComponent } from '@pages/contact/contact.component';
+import { ContactCoverComponent } from '@pages/contact/contact-cover/contact-cover.component';
+import { ContactInfoComponent } from '@pages/contact/contact-info/contact-info.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +54,10 @@ import { PersonalEventComponent } from '@pages/timeline/personal-event/personal-
     TimelineContecntDirective,
     ProjectEventComponent,
     TimelineEventComponent,
-    PersonalEventComponent
+    PersonalEventComponent,
+    ContactComponent,
+    ContactCoverComponent,
+    ContactInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -64,6 +71,7 @@ import { PersonalEventComponent } from '@pages/timeline/personal-event/personal-
     MatToolbarModule,
     MatListModule,
     MatChipsModule,
+    MatCardModule,
     MatDividerModule,
     HttpClientModule,
     ScrollDispatchModule
