@@ -56,6 +56,10 @@ export class AppComponent implements OnInit  {
         } else {
           this.isScreenTop = false;
         }
+
+        if (this.toggle) {
+          this.navToggle();
+        }
       });
     });
   }
