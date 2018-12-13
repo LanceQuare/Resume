@@ -1,8 +1,7 @@
-
 <mat-grid-list cols="4" [rowHeight]="rowHeight">
   <mat-grid-tile [colspan]="coverRow"><app-cover class="cover"></app-cover></mat-grid-tile>
   <mat-grid-tile [colspan]="introRow"><app-intro></app-intro></mat-grid-tile>
-  <mat-grid-tile colspan="4"><app-personality></app-personality></mat-grid-tile>
-  <mat-grid-tile colspan="4"><app-portfolio></app-portfolio></mat-grid-tile>
+  <mat-grid-tile colspan="4"><app-portfolio class="cover"></app-portfolio></mat-grid-tile>
+  <!--<mat-grid-tile colspan="4"><app-personality></app-personality></mat-grid-tile>-->
   <mat-grid-tile colspan="4"><app-actions></app-actions></mat-grid-tile>
 </mat-grid-list>
