@@ -11,15 +11,18 @@ import { ScrollDispatcher, CdkScrollable } from '@angular/cdk/scrolling';
     trigger('animanav', [
       state('show', style({
         'width': '50%',
-        'opacity': '1'
+        'opacity': '1',
+        'display': 'block'
       })),
       state('show-mobile', style({
         'width': '100%',
-        'opacity': '1'
+        'opacity': '1',
+        'display': 'block'
       })),
       state('dismiss', style({
         'width': '0%',
-        'opacity': '0'
+        'opacity': '0',
+        'display': 'none'
       })),
       transition('* => *', animate(250))
     ])
