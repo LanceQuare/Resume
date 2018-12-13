@@ -1,0 +1,10 @@
+.component-content {
+  max-width: 440px;
+  margin: 40px;
+}
+
+.action-btn {
+  border: 2px solid black;
+  min-width: 120px;
+  margin-inline-end: 10px;
+}
