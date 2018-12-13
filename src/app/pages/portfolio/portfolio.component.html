@@ -1,3 +1,120 @@
-<p>
-  portfolio works!
-</p>
+<mat-grid-list cols="5" class="component-content" [rowHeight]="rowHeight">
+  <mat-grid-tile [colspan]="introRow">
+    <div class="intro-font">
+      <h1>Portfolio</h1>
+      <p>Successful cases, ...etc.</p>
+      <button mat-stroked-button color="accent" class="dashboard-btn-white">More</button>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="listRow" style="min-height: 600px;" class="card-list">
+    <div style="position: absolute; top:0; left:40px;">
+      <mat-card class="porfolio-card">
+        <mat-card-header>
+          <img mat-card-avatar src="assets/img/strata-icon.png" />
+          <mat-card-title>Strata by Campuscruiser</mat-card-title>
+          <mat-card-subtitle>123</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-chip-list>
+            <mat-chip>Angular</mat-chip>
+            <mat-chip>Ionic Framework</mat-chip>
+            <mat-chip>Android</mat-chip>
+            <mat-chip>IOS</mat-chip>
+          </mat-chip-list>
+          <p class="card-content">This is content, This is content,This is content,This is content,This is content,This is content.</p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="porfolio-card">
+        <mat-card-header>
+          <img mat-card-avatar src="assets/img/mitake-icon.png" />
+          <mat-card-title>Mitake Stock Tracking</mat-card-title>
+          <mat-card-subtitle>123</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-chip-list>
+            <mat-chip>Android SDK</mat-chip>
+            <mat-chip>1,000,000+ Users</mat-chip>
+          </mat-chip-list>
+          <p class="card-content">This is content, This is content,This is content,This is content,This is content,This is content.</p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="porfolio-card">
+        <mat-card-header>
+          <img mat-card-avatar src="assets/img/taifex-icon.png" />
+          <mat-card-title>TAIFEX(Taiwan Futures Exchange)</mat-card-title>
+          <mat-card-subtitle>123</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-chip-list>
+              <mat-chip>Android SDK</mat-chip>
+              <mat-chip>100,000+ Users</mat-chip>
+            </mat-chip-list>
+            <p class="card-content">This is content, This is content,This is content,This is content,This is content,This is content.</p>
+          </mat-card-content>
+      </mat-card>
+    </div>
+    
+  </mat-grid-tile>
+</mat-grid-list>
+<!--<div class="component-content">
+  <mat-card class="porfolio-card">
+    <mat-card-header>
+      <img mat-card-avatar src="assets/img/strata-icon.png" />
+      <mat-card-title>Strata by Campuscruiser</mat-card-title>
+      <mat-card-subtitle>123</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-chip-list>
+        <mat-chip>Angular</mat-chip>
+        <mat-chip>Ionic Framework</mat-chip>
+        <mat-chip>Android</mat-chip>
+        <mat-chip>IOS</mat-chip>
+      </mat-chip-list>
+      <p>This is content, This is content,This is content,This is content,This is content,This is content.</p>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="porfolio-card">
+    <mat-card-header>
+      <img mat-card-avatar src="assets/img/mitake-icon.png" />
+      <mat-card-title>Mitake Stock Tracking</mat-card-title>
+      <mat-card-subtitle>123</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-chip-list>
+        <mat-chip>Android SDK</mat-chip>
+        <mat-chip>1,000,000+ Users</mat-chip>
+      </mat-chip-list>
+      <p>This is content, This is content,This is content,This is content,This is content,This is content.</p>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="porfolio-card">
+    <mat-card-header>
+      <img mat-card-avatar src="assets/img/taifex-icon.png" />
+      <mat-card-title>TAIFEX(Taiwan Futures Exchange)</mat-card-title>
+      <mat-card-subtitle>123</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-chip-list>
+          <mat-chip>Android SDK</mat-chip>
+          <mat-chip>100,000+ Users</mat-chip>
+        </mat-chip-list>
+        <p>This is content, This is content,This is content,This is content,This is content,This is content.</p>
+      </mat-card-content>
+  </mat-card>-->
+  <!--<mat-card class="porfolio-card">
+      <img mat-card-avatar src="assets/img/ami-icon.png" />
+      <mat-card-title>A-Mi Project</mat-card-title>
+      <mat-card-subtitle>123</mat-card-subtitle>
+    </mat-card>
+  <mat-card class="porfolio-card">
+    <img mat-card-avatar src="assets/img/visavis-icon.png" />
+    <mat-card-title>Vis-a-Vis</mat-card-title>
+    <mat-card-subtitle>123</mat-card-subtitle>
+  </mat-card>
+  <mat-card class="porfolio-card">
+    <img mat-card-avatar src="assets/img/muchmarts-icon.png" />
+    <mat-card-title>MuchMarts</mat-card-title>
+    <mat-card-subtitle>123</mat-card-subtitle>
+  </mat-card>-->
+<!--</div>-->
+

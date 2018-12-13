@@ -1,0 +1,25 @@
+.component-content {
+  background-color: black;
+  padding: 40px;
+}
+
+.dashboard-btn-white {
+  border: 2px solid white;
+  min-width: 120px;
+}
+
+.intro-font {
+  color: white;
+}
+
+.card-listt .mat-figure {
+  justify-content: flex-start;
+}
+
+.porfolio-card {
+  margin-block-start: 40px;
+}
+
+.card-content {
+  max-width: 440px;
+}
